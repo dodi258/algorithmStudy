@@ -7,7 +7,7 @@ package apr24_2020;
 
 /**
  *
- * @author 주세인1
+ * @author dodi258
  */
 import java.io.IOException; 
 import java.io.BufferedReader; 
