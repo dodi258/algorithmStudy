@@ -55,6 +55,11 @@ public class SW역량테스트준비__게임_1103 {
     }
     
     static int dfs(int r, int c) {
+        System.out.println("r: " + r + " , " +"c: " + c ); 
+        for(int i = 0; i < N; i++) {
+            System.out.println(Arrays.toString(dp[i])); 
+        }
+        
         if (! boundaryCheck(r, c) || map[r][c] == Integer.MAX_VALUE)
             return 0; 
         
@@ -75,8 +80,16 @@ public class SW역량테스트준비__게임_1103 {
             dp[r][c] = Math.max(dp[r][c], dfs(r + map[r][c] * dr[i], c + map[r][c] * dc[i]) + 1); 
         }
         
+        // dfs할때 4개 중 아무것도 안될때, 
+        System.out.println("악"); 
+        
+        // 아직 안갔으니깐. 
         visited[r][c] = false; 
         
+        System.out.println("r: " + r + " , " +"c: " + c ); 
+        for(int i = 0; i < N; i++) {
+            System.out.println(Arrays.toString(dp[i])); 
+        }
         return dp[r][c]; 
     }
     
